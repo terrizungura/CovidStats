@@ -37,6 +37,8 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:okhttp:3.14.4'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.14.4'
+    implementation 'io.github.cdimascio:java-dotenv:5.2.1'
+    implementation group: 'io.github.cdimascio', name: 'java-dotenv', version: '5.2.1'
 
 
 
