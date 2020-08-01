@@ -3,95 +3,64 @@ package com.example.covidstats.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class StatsResponse {
 
-    @SerializedName("continent")
+    @SerializedName("get")
     @Expose
-    private String continent;
-    @SerializedName("country")
+    private String get;
+//    @SerializedName("parameters")
+//    @Expose
+//    private Parameters parameters;
+    @SerializedName("errors")
     @Expose
-    private String country;
-    @SerializedName("population")
+    private List<Object> errors = null;
+    @SerializedName("results")
     @Expose
-    private Integer population;
-    @SerializedName("cases")
+    private Integer results;
+    @SerializedName("statistics")
     @Expose
-    private Cases cases;
-    @SerializedName("deaths")
-    @Expose
-    private Deaths deaths;
-    @SerializedName("tests")
-    @Expose
-    private Tests tests;
-    @SerializedName("day")
-    @Expose
-    private String day;
-    @SerializedName("time")
-    @Expose
-    private String time;
+    private List<Statistics> statistics = null;
 
-    public String getContinent() {
-        return continent;
+    public String getGet() {
+        return get;
     }
 
-    public void setContinent(String continent) {
-        this.continent = continent;
+    public void setGet(String get) {
+        this.get = get;
     }
 
-    public String getCountry() {
-        return country;
+//    public Parameters getParameters() {
+//        return parameters;
+//    }
+//
+//    public void setParameters(Parameters parameters) {
+//        this.parameters = parameters;
+//    }
+
+    public List<Object> getErrors() {
+        return errors;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public void setErrors(List<Object> errors) {
+        this.errors = errors;
     }
 
-    public Integer getPopulation() {
-        return population;
+    public Integer getResults() {
+        return results;
     }
 
-    public void setPopulation(Integer population) {
-        this.population = population;
+    public void setResults(Integer results) {
+        this.results = results;
     }
 
-    public Cases getCases() {
-        return cases;
+    public List<Statistics> getStatistics() {
+        return statistics;
     }
 
-    public void setCases(Cases cases) {
-        this.cases = cases;
-    }
-
-    public Deaths getDeaths() {
-        return deaths;
-    }
-
-    public void setDeaths(Deaths deaths) {
-        this.deaths = deaths;
-    }
-
-    public Tests getTests() {
-        return tests;
-    }
-
-    public void setTests(Tests tests) {
-        this.tests = tests;
-    }
-
-    public String getDay() {
-        return day;
-    }
-
-    public void setDay(String day) {
-        this.day = day;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+    public void setStatistics(List<Statistics> statistics) {
+        this.statistics = statistics;
     }
 
 }

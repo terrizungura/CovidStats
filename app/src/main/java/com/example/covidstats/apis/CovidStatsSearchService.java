@@ -1,5 +1,6 @@
 package com.example.covidstats.apis;
 
+import com.example.covidstats.models.Statistics;
 import com.example.covidstats.models.StatsResponse;
 
 import retrofit2.Call;

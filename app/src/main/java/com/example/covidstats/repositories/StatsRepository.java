@@ -10,6 +10,7 @@ import retrofit2.Response;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.example.covidstats.apis.CovidStatsSearchService;
+import com.example.covidstats.models.Statistics;
 import com.example.covidstats.models.StatsResponse;
 
 public class StatsRepository {
