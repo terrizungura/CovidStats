@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.example.covidstats.models.Statistics;
 import com.example.covidstats.models.StatsResponse;
 import com.example.covidstats.repositories.StatsRepository;
 
