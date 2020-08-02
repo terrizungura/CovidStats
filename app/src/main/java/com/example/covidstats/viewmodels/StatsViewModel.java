@@ -27,7 +27,7 @@ public class StatsViewModel extends AndroidViewModel {
 
     public void searchStats(String country){
         Dotenv dotenv = Dotenv.configure().directory("/asset").filename("env").load();
-        statsRepository.searchStats(country, dotenv.get("X-RAPIDAPI-KEY"));
+        statsRepository.searchStats(country, dotenv.get("5b4049b3dcmsh22ff97160b6ca06p15c6acjsn2c0ffeede1ea"));
     }
 
     public LiveData<StatsResponse> getStatsResponseLiveData() {

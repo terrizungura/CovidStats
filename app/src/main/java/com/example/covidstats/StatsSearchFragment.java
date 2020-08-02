@@ -55,7 +55,7 @@ public class StatsSearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_stats_search, container, false);
 
-        RecyclerView recyclerView = view.findViewById(R.id.fragment_country_search);
+        RecyclerView recyclerView = view.findViewById(R.id.fragment_searchResultsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
