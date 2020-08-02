@@ -33,14 +33,16 @@ public class StatsResultsAdapter  extends RecyclerView.Adapter<StatsResultsAdapt
 
         holder.country.setText(statistics.getCountry());
         holder.date.setText(statistics.getDay());
-        holder.newCases.setText(statistics.getCases().getNew());
-        holder.totalDeaths.setText(statistics.getDeaths().getTotal());
-        holder.totalCases.setText(statistics.getCases().getTotal());
+        holder.newCases.setText(holder.itemView.getContext().getString(R.string.new_case, statistics.getCases().getNew()));
+        holder.totalDeaths.setText(holder.itemView.getContext().getString(R.string.total_deaths, statistics.getDeaths().getTotal()));
+        holder.totalCases.setText(holder.itemView.getContext().getString(R.string.total_cases, statistics.getCases().getTotal()));
+        holder.totalRecoveries.setText(holder.itemView.getContext().getString(R.string.total_recoveries, statistics.getCases().getRecovered()));
+
     }
 
     @Override
     public int getItemCount() {
-        return results.size();
+        return results != null ? results.size(): 0;
     }
 
     public void setResults(List<Statistics> results){
@@ -54,6 +56,7 @@ public class StatsResultsAdapter  extends RecyclerView.Adapter<StatsResultsAdapt
         private TextView newCases;
         private TextView totalDeaths;
         private TextView totalCases;
+        private TextView totalRecoveries;
 
         public StatsResultsHolder(View itemView) {
             super(itemView);
@@ -63,6 +66,7 @@ public class StatsResultsAdapter  extends RecyclerView.Adapter<StatsResultsAdapt
             newCases = itemView.findViewById(R.id.tv_new_cases);
             totalDeaths = itemView.findViewById(R.id.tv_total_deaths);
             totalCases = itemView.findViewById(R.id.tv_total_cases);
+            totalRecoveries = itemView.findViewById(R.id.tv_total_recoveries);
         }
     }
 

@@ -25,9 +25,12 @@ public class StatsViewModel extends AndroidViewModel {
         statsResponseLiveData = statsRepository.getStatsResponseLiveData();
     }
 
-    public void searchStats(String country){
-        Dotenv dotenv = Dotenv.configure().directory("/asset").filename("env").load();
-        statsRepository.searchStats(country, dotenv.get("5b4049b3dcmsh22ff97160b6ca06p15c6acjsn2c0ffeede1ea"));
+    public void searchStatsByCountry(String country){
+        statsRepository.searchStatsByCountry(country);
+    }
+
+    public void searchStats(){
+        statsRepository.searchStats();
     }
 
     public LiveData<StatsResponse> getStatsResponseLiveData() {

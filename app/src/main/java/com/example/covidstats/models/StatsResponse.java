@@ -10,16 +10,13 @@ public class StatsResponse {
     @SerializedName("get")
     @Expose
     private String get;
-//    @SerializedName("parameters")
-//    @Expose
-//    private Parameters parameters;
     @SerializedName("errors")
     @Expose
     private List<Object> errors = null;
     @SerializedName("results")
     @Expose
     private Integer results;
-    @SerializedName("statistics")
+    @SerializedName("response")
     @Expose
     private List<Statistics> statistics = null;
 
@@ -30,14 +27,6 @@ public class StatsResponse {
     public void setGet(String get) {
         this.get = get;
     }
-
-//    public Parameters getParameters() {
-//        return parameters;
-//    }
-//
-//    public void setParameters(Parameters parameters) {
-//        this.parameters = parameters;
-//    }
 
     public List<Object> getErrors() {
         return errors;
