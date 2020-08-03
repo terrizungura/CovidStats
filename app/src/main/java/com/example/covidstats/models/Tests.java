@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class Tests {
 
-
     @SerializedName("total")
     @Expose
     private Integer total;
