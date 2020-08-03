@@ -6,4 +6,5 @@
     <string name="total_deaths">%d Total deaths</string>
     <string name="total_cases">%d Total cases</string>
     <string name="total_recoveries">%d Total Recoveries</string>
+    <string name="no_data_to_display">No data to display</string>
 </resources>

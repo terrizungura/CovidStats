@@ -2,8 +2,6 @@ package com.example.covidstats.repositories;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -61,4 +59,5 @@ public class StatsRepository {
     public LiveData<StatsResponse> getStatsResponseLiveData(){
         return statsResponseLiveData;
     }
+
 }

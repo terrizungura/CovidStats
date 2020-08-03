@@ -15,6 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.example.covidstats.adapters.StatsResultsAdapter;
 import com.example.covidstats.models.StatsResponse;
@@ -27,11 +29,12 @@ public class StatsSearchFragment extends Fragment {
 
     private TextInputEditText searchEditText;
     private Button btnSearch;
+    private ProgressBar progressBar;
+    private TextView tvNoData;
 
     public StatsSearchFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,4 +85,5 @@ public class StatsSearchFragment extends Fragment {
             viewModel.searchStatsByCountry(searchString);
         }
     }
+
 }
